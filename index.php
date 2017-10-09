@@ -91,6 +91,12 @@ function printResponse($name1, $name2, $result) {
             </div>
           </form>
         </div>
+		<div class="well text-center">
+			<text class="text-danger"> Download Flames app for Android </text>
+			<a href="http://jaisel.000webhostapp.com/apps/com.jaisel.flames-1.3.0.apk" target=_self>
+				<button class="btn btn-danger" style="margin-left: 20px">Download</button>
+			</a>
+		</div>
       </body>
     </html>
 END;
