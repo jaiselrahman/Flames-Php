@@ -74,15 +74,17 @@ function printResponse($name1, $name2, $result) {
                   type="text" required="true"> </div>
             </div>
             <div class="form-group row">
-				<div class="col-sm-offset-2 col-sm-2 col-md-offset-3 col-md-1"> 
-					<button type="button" class="btn btn-info" onClick="clearText();">Clear</button>
-				</div>
-		
-				<div class="col-sm-6 col-md-5" style="text-align: right">
-					<button type="submit" class="btn  bg-primary">Do Flames...!</button> 
-				</div>
+            <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+				<table width="100%" border=0>
+					<tr><td >
+						<button type="button" class="btn btn-info" onClick="clearText();">Clear</button>
+					</td>
+					<td align="right">
+						<button type="submit" class="btn bg-primary" >Do Flames...!</button> 
+					</td></tr>
+				</table>				
 			</div>
-			
+			</div>
             <div class="form-group row">
             <strong>
               <div class="alert-success text-center text-danger" id="result">{$result}
