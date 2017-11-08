@@ -15,6 +15,8 @@
 * limitations under the License.
 */
 
+header('Location: /flames/index.php');
+
 function flames($name1, $name2) {
     if(!isset($name1) or !isset($name2)) {
         return null;

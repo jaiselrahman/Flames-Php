@@ -34,7 +34,7 @@ $app->get('/', function ($req, $res, $args) use ($app) {
     printResponse($n1,$n2,$result);
 });
 
-$app->get('/{name1}[/{name2}]', function ($req, $res, $args){
+$app->get('/{name1}[/[{name2}[/]]]', function ($req, $res, $args){
     if($args['name1'] == $args['name2']) {
 		$result = "Seems to be same person";
 	} else if (!isset($args['name2'])) {
@@ -61,16 +61,15 @@ function printResponse($name1, $name2, $result) {
       <body class="container">
         <h1 class="bg-primary" style="text-align: center">Flames</h1>
         <div class="well" style="margin-top: 100px;">
-          <form class="form-horizontal" style="margin-top: 36px;" role="form" action="/flames/index.php"
-            method="GET">
+          <form id="flames" class="form-horizontal" style="margin-top: 36px;" role="form" action="/flames/index.php" >
             <div class="form-group row">
               <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6"> <input
-                  class="form-control" name="name1" id="name1" value="{$name1}" placeholder="Enter Your Name" 
+                  class="form-control" id="name1" value="{$name1}" placeholder="Enter Your Name" 
                   autofocus="true" type="text" required="true"> </div>
             </div>
             <div class="form-group row">
               <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6"> <input
-                  class="form-control" name="name2" id="name2" value="{$name2}" placeholder="Enter Another Name" 
+                  class="form-control" id="name2" value="{$name2}" placeholder="Enter Another Name" 
                   type="text" required="true"> </div>
             </div>
             <div class="form-group row">
@@ -80,7 +79,7 @@ function printResponse($name1, $name2, $result) {
 						<button type="button" class="btn btn-info" onClick="clearText();">Clear</button>
 					</td>
 					<td align="right">
-						<button type="submit" class="btn bg-primary" >Do Flames...!</button> 
+						<button type="submit" class="btn bg-primary" onclick="onSubmit();">Do Flames...!</button> 
 					</td></tr>
 				</table>				
 			</div>
@@ -103,4 +102,3 @@ function printResponse($name1, $name2, $result) {
     </html>
 END;
 }
-

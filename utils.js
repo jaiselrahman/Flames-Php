@@ -19,3 +19,8 @@ function clearText() {
     document.getElementById('name1').value='';
     document.getElementById('name2').value='';
 }
+
+function onSubmit() {
+    document.getElementById('flames').action = "/flames/" + document.getElementById('name1').value + "/" + document.getElementById('name2').value;
+    return true;
+}
