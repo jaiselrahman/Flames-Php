@@ -12,10 +12,10 @@ Find out FLAMES between two names:
 
 Visit
 
-	http://jaiselrahman.ezyro.com/flames
+	http://fundo.ezyro.com/flames
 or
 
-	http://jaiselrahman.ezyro.com/flames/YOURNAME/ANOTHERNAME
+	http://fundo.ezyro.com/flames/YOURNAME/ANOTHERNAME
 *Replace __YOURNAME__ with yourname and __ANOTHERNAME__  with the one you want to check it out.*
 
 Built using PHP, HTML and BootStrap.
